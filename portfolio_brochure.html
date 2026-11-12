@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperial Interiors - Premium Portfolio & Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+        
+        /* Minimalist Light & Airy Theme */
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F9F8F6; /* Soft Linen */
+            --accent: #A39171; /* Elegant Taupe */
+            --text-primary: #1A1A1A; /* Deep Charcoal */
+            --text-secondary: #666666; /* Slate Grey */
+            --border-color: #E5E5E5;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #e5e5e5;
+            color: var(--text-primary);
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Print Styles */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0; 
+            }
+            body {
+                background-color: var(--bg-primary);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .page {
+                width: 210mm;
+                height: 297mm;
+                page-break-after: always;
+                position: relative;
+                overflow: hidden;
+                box-sizing: border-box;
+                background-color: var(--bg-primary);
+                color: var(--text-primary);
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Screen Preview Styles */
+        @media screen {
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+            }
+            .page {
+                width: 210mm;
+                height: 297mm;
+                background-color: var(--bg-primary);
+                color: var(--text-primary);
+                margin-bottom: 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                position: relative;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+        }
+
+        /* Custom Classes */
+        .text-accent { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+        .text-primary { color: var(--text-primary); }
+        .text-secondary { color: var(--text-secondary); }
+        .bg-surface { background-color: var(--bg-secondary); }
+        .border-light { border-color: var(--border-color); }
+    </style>
+</head>
+<body>
+
+    <!-- Instruction Bar (Hidden on Print) -->
+    <div class="no-print bg-white text-gray-800 p-4 rounded-lg shadow-md mb-8 max-w-2xl text-center border border-gray-200">
+        <h2 class="text-xl font-bold mb-2">Imperial Interiors Portfolio (Light & Airy Theme)</h2>
+        <p class="mb-4">To save this as a high-quality PDF to send to clients:</p>
+        <p class="font-mono bg-gray-100 p-2 rounded">Press <b>Ctrl + P</b> &gt; Set Destination to <b>"Save as PDF"</b> &gt; Set Margins to <b>"None"</b> &gt; Check <b>"Background graphics"</b></p>
+    </div>
+
+    <!-- Page 1: Cover -->
+    <div class="page flex flex-col justify-center items-center text-center p-12 relative">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Cover Background" class="w-full h-full object-cover opacity-20 grayscale">
+        </div>
+        <div class="z-10 bg-white/90 p-16 shadow-xl backdrop-blur-md border border-gray-100">
+            <h1 class="text-6xl font-serif text-primary tracking-widest uppercase mb-6">Imperial<br>Interiors</h1>
+            <div class="h-0.5 w-24 bg-accent mx-auto mb-8"></div>
+            <p class="text-xl text-secondary font-light tracking-wide uppercase">Architecture & Interior Design</p>
+            <p class="mt-8 text-accent tracking-[0.2em] uppercase text-sm font-bold">Portfolio & Service Catalogue</p>
+            <p class="mt-6 text-secondary tracking-widest uppercase text-xs">By Jayesh</p>
+        </div>
+    </div>
+
+    <!-- Page 2: About & Philosophy -->
+    <div class="page flex flex-col p-16">
+        <div class="flex-1">
+            <h2 class="text-4xl font-serif text-primary mb-2">Our Philosophy</h2>
+            <div class="h-0.5 w-16 bg-accent mb-8"></div>
+            
+            <div class="text-lg leading-relaxed text-secondary font-light space-y-6">
+                <p>
+                    We believe that luxury is not just an aesthetic; it is a meticulously crafted experience. At Imperial Interiors, our firm bridges the delicate gap between striking architectural forms and intimate, comfortable interior spaces.
+                </p>
+                <p>
+                    Whether we are conceptualizing a commercial workspace from the ground up or breathing new life into a residential villa, our approach remains the same: a relentless pursuit of perfection, premium material selection, and an unwavering commitment to our clients' vision.
+                </p>
+            </div>
+        </div>
+        <div class="h-[120mm] relative mt-8">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Office Space" class="w-full h-full object-cover shadow-lg">
+        </div>
+    </div>
+
+    <!-- Page 3: Architectural & Interior Work -->
+    <div class="page flex flex-col p-16 bg-surface">
+        <h2 class="text-4xl font-serif text-primary mb-2">Mastery in Architecture</h2>
+        <div class="h-0.5 w-16 bg-accent mb-8"></div>
+        
+        <div class="grid grid-cols-2 gap-10 h-full">
+            <div class="flex flex-col bg-white p-6 shadow-sm border border-light">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Architecture" class="w-full h-[70mm] object-cover mb-6">
+                <h3 class="text-2xl font-serif text-primary mb-3">Structural Elegance</h3>
+                <p class="text-sm text-secondary font-light leading-relaxed">
+                    Our architectural planning goes beyond mere blueprints. We focus on spatial flow, natural light optimization, and timeless exterior facades. Every elevation drawing is a piece of art, rigorously detailed to ensure seamless on-site execution.
+                </p>
+            </div>
+            <div class="flex flex-col bg-white p-6 shadow-sm border border-light mt-12">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior" class="w-full h-[70mm] object-cover mb-6">
+                <h3 class="text-2xl font-serif text-primary mb-3">Bespoke Interiors</h3>
+                <p class="text-sm text-secondary font-light leading-relaxed">
+                    Transitioning seamlessly from the exterior, our interior work focuses on texture, mood, and bespoke furnishings. We produce photorealistic 3D renders that allow our clients to walk through their dream spaces before a single brick is laid.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Special Detailing -->
+    <div class="page flex flex-col p-16">
+        <h2 class="text-4xl font-serif text-primary mb-2">Special Detailing & Drawings</h2>
+        <div class="h-0.5 w-16 bg-accent mb-8"></div>
+        
+        <div class="relative h-[100mm] w-full mb-10 shadow-md">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Detailing" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="grid grid-cols-3 gap-8 text-sm text-secondary font-light">
+            <div class="border-t border-light pt-4">
+                <h4 class="text-lg font-serif text-accent mb-2">Millwork Drawings</h4>
+                <p>Intricate, millimeter-perfect shop drawings for custom cabinetry, paneling, and moldings that scream luxury.</p>
+            </div>
+            <div class="border-t border-light pt-4">
+                <h4 class="text-lg font-serif text-accent mb-2">Lighting Layouts</h4>
+                <p>Strategic placement of ambient, task, and accent lighting to create the perfect mood for every hour of the day.</p>
+            </div>
+            <div class="border-t border-light pt-4">
+                <h4 class="text-lg font-serif text-accent mb-2">Material Specification</h4>
+                <p>Comprehensive moodboards and material schedules featuring premium marbles, sustainable woods, and rich fabrics.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Packages & Rates -->
+    <div class="page flex flex-col p-16 bg-surface">
+        <h2 class="text-4xl font-serif text-primary mb-2">Design Packages & Rates</h2>
+        <div class="h-0.5 w-16 bg-accent mb-10"></div>
+        
+        <div class="space-y-6 flex-1">
+            <!-- Package 1 -->
+            <div class="border border-light p-6 bg-white shadow-sm">
+                <h3 class="text-xl font-serif text-primary mb-3">Premium Residential Interior</h3>
+                <div class="grid grid-cols-2 gap-4 mb-3">
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Consultancy (Design Only)</span>
+                        <span class="text-primary font-medium">₹100 - ₹250 / sq. ft.</span>
+                    </div>
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Execution (With Material)</span>
+                        <span class="text-primary font-medium">₹2,200 - ₹4,500+ / sq. ft.</span>
+                    </div>
+                </div>
+                <p class="text-sm text-secondary mb-3">Complete interior design including space planning, 3D visualization, material selection, and premium execution.</p>
+                <p class="text-xs text-primary uppercase tracking-widest"><span class="text-accent font-bold">Styles:</span> Modern Luxury, Neo-Classical, Minimalist</p>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="border border-light p-6 bg-white shadow-sm">
+                <h3 class="text-xl font-serif text-primary mb-3">Commercial & Office Spaces</h3>
+                <div class="grid grid-cols-2 gap-4 mb-3">
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Consultancy (Design Only)</span>
+                        <span class="text-primary font-medium">₹80 - ₹150 / sq. ft.</span>
+                    </div>
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Execution (With Material)</span>
+                        <span class="text-primary font-medium">₹1,800 - ₹3,500 / sq. ft.</span>
+                    </div>
+                </div>
+                <p class="text-sm text-secondary mb-3">Classy and productive workspaces reflecting your brand identity with ergonomic and acoustic planning.</p>
+                <p class="text-xs text-primary uppercase tracking-widest"><span class="text-accent font-bold">Styles:</span> Industrial Chic, Contemporary Corporate</p>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="border border-light p-6 bg-white shadow-sm">
+                <h3 class="text-xl font-serif text-primary mb-3">Architectural Planning & Drawings</h3>
+                <div class="grid grid-cols-2 gap-4 mb-3">
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Per Sq. Ft.</span>
+                        <span class="text-primary font-medium">₹40 - ₹100 / sq. ft.</span>
+                    </div>
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Lump Sum (Per Project)</span>
+                        <span class="text-primary font-medium">₹75,000 - ₹2,50,000+</span>
+                    </div>
+                </div>
+                <p class="text-sm text-secondary mb-3">High-precision 2D layouts, structural drawings, MEP layouts, and 3D elevations.</p>
+                <p class="text-xs text-primary uppercase tracking-widest"><span class="text-accent font-bold">Includes:</span> Floor Plans, Elevations, Structural Detailing</p>
+            </div>
+            
+            <!-- Package 4 -->
+            <div class="border border-light p-6 bg-white shadow-sm">
+                <h3 class="text-xl font-serif text-primary mb-3">Turnkey Execution Projects</h3>
+                <div class="grid grid-cols-2 gap-4 mb-3">
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Management Fee</span>
+                        <span class="text-primary font-medium">10% - 15% of project cost</span>
+                    </div>
+                    <div>
+                        <span class="text-accent font-bold block text-sm">Fixed Rate</span>
+                        <span class="text-primary font-medium">₹2,500 - ₹5,000+ / sq. ft.</span>
+                    </div>
+                </div>
+                <p class="text-sm text-secondary">From the very first conceptual drawing to the final elegant touch, we handle the entire project lifecycle with strict quality assurance.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Contact & Back Cover -->
+    <div class="page flex flex-col justify-center items-center text-center p-16 relative">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Back Cover" class="w-full h-full object-cover opacity-30">
+        </div>
+        
+        <div class="z-10 bg-white/95 border border-light p-12 max-w-md w-full shadow-2xl backdrop-blur-md">
+            <h2 class="text-3xl font-serif text-primary mb-6">Imperial Interiors</h2>
+            <div class="h-px w-full bg-border-light mb-6"></div>
+            
+            <div class="space-y-4 text-secondary font-light text-base mb-8">
+                <p class="text-xl font-bold text-primary">Jayesh</p>
+                <p>Indore, Madhya Pradesh</p>
+                <p class="text-2xl text-accent mt-4 font-bold">+91 93999 69641</p>
+            </div>
+            
+            <div class="h-px w-full bg-border-light mb-8"></div>
+            
+            <p class="text-accent tracking-[0.3em] uppercase text-xs mb-2 font-bold">Follow Our Work</p>
+            <p class="text-secondary text-xs">@ImperialInteriors on Instagram & Pinterest</p>
+        </div>
+    </div>
+
+</body>
+</html>

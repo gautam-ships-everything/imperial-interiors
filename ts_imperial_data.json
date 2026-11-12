@@ -1,0 +1,92 @@
+{
+  "firmDetails": {
+    "name": "TS Imperial Homes and Interiors",
+    "aliases": ["Imperial Interiors"],
+    "owner": "Jayesh",
+    "location": "Indore, Madhya Pradesh, India",
+    "contact": {
+      "phone": "+91 93999 69641",
+      "instagram": "@ImperialInteriors",
+      "pinterest": "@ImperialInteriors"
+    }
+  },
+  "businessPhilosophy": {
+    "coreValues": [
+      "Luxury as a meticulously crafted experience",
+      "Bridging striking architectural forms with intimate interior spaces",
+      "Relentless pursuit of perfection",
+      "Premium material selection"
+    ]
+  },
+  "servicesOffered": [
+    {
+      "category": "Premium Residential Interior",
+      "description": "Complete interior design including space planning, 3D visualization, material selection, and premium execution.",
+      "styles": ["Modern Luxury", "Neo-Classical", "Minimalist"],
+      "pricing": {
+        "consultancy_per_sqft_inr": [100, 250],
+        "execution_per_sqft_inr": [2200, 4500]
+      }
+    },
+    {
+      "category": "Commercial & Office Spaces",
+      "description": "Classy and productive workspaces reflecting brand identity with ergonomic and acoustic planning.",
+      "styles": ["Industrial Chic", "Contemporary Corporate"],
+      "pricing": {
+        "consultancy_per_sqft_inr": [80, 150],
+        "execution_per_sqft_inr": [1800, 3500]
+      }
+    },
+    {
+      "category": "Architectural Planning & Drawings",
+      "description": "High-precision 2D layouts, structural drawings, MEP layouts, and 3D elevations.",
+      "deliverables": ["Floor Plans", "Elevations", "Structural Detailing"],
+      "pricing": {
+        "rate_per_sqft_inr": [40, 100],
+        "lump_sum_per_project_inr": [75000, 250000]
+      }
+    },
+    {
+      "category": "Turnkey Execution Projects",
+      "description": "From conceptual drawing to final elegant touch, handling the entire project lifecycle.",
+      "pricing": {
+        "management_fee_percentage": [10, 15],
+        "fixed_rate_per_sqft_inr": [2500, 5000]
+      }
+    }
+  ],
+  "specialDetailing": [
+    {
+      "type": "Millwork Drawings",
+      "description": "Intricate, millimeter-perfect shop drawings for custom cabinetry, paneling, and moldings."
+    },
+    {
+      "type": "Lighting Layouts",
+      "description": "Strategic placement of ambient, task, and accent lighting."
+    },
+    {
+      "type": "Material Specification",
+      "description": "Comprehensive moodboards featuring premium marbles, sustainable woods, and rich fabrics."
+    }
+  ],
+  "digitalAssets": {
+    "webPlatform": "Next.js Application",
+    "webDirectory": "d:\\JAYESH-interior web",
+    "planningDirectory": "C:\\Users\\DELL\\OneDrive - Digital gabru\\wowowo\\WEBFOLIO\\",
+    "brochures": ["portfolio_brochure.html"],
+    "designThemesExplored": [
+      "v2_dark_luxe",
+      "v3_royal_italian",
+      "v4_marble_cream",
+      "v5_imperial_depth",
+      "v6_imperial_marble_bg",
+      "Minimalist Light & Airy Theme (Brochure)"
+    ],
+    "futurePlans": [
+      "Research new tech in construction",
+      "Design firm logos",
+      "Re-visit diary after meetings",
+      "Ongoing market research in construction and architecture"
+    ]
+  }
+}

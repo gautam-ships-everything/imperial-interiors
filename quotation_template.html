@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation - Imperial Interiors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+        
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F9F8F6;
+            --accent: #A39171;
+            --text-primary: #1A1A1A;
+            --text-secondary: #666666;
+            --border-color: #E5E5E5;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #e5e5e5;
+            color: var(--text-primary);
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        @media print {
+            @page {
+                size: A4;
+                margin: 0; 
+            }
+            body {
+                background-color: var(--bg-primary);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .page {
+                width: 210mm;
+                min-height: 297mm;
+                position: relative;
+                box-sizing: border-box;
+                background-color: var(--bg-primary);
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        @media screen {
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+            }
+            .page {
+                width: 210mm;
+                min-height: 297mm;
+                background-color: var(--bg-primary);
+                margin-bottom: 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print bg-white text-gray-800 p-4 rounded-lg shadow-md mb-8 max-w-2xl text-center border border-gray-200">
+        <h2 class="text-xl font-bold mb-2">Quotation Template Ready!</h2>
+        <p class="mb-4">You can edit the text directly in the code, or just print it out. To save as PDF:</p>
+        <p class="font-mono bg-gray-100 p-2 rounded">Press <b>Ctrl + P</b> &gt; Destination: <b>"Save as PDF"</b> &gt; Margins: <b>"None"</b> &gt; Check <b>"Background graphics"</b></p>
+    </div>
+
+    <div class="page flex flex-col p-12 relative">
+        
+        <!-- Header -->
+        <div class="flex justify-between items-start border-b-2 border-[var(--accent)] pb-8 mb-8">
+            <div class="flex items-center gap-4">
+                <img src="logo.png" alt="Imperial Interiors Logo" class="h-20 object-contain">
+                <div>
+                    <h1 class="text-4xl font-serif text-[var(--text-primary)] tracking-widest uppercase mb-2">Imperial<br>Interiors</h1>
+                    <p class="text-sm text-[var(--text-secondary)] tracking-widest uppercase">Architecture & Interior Design</p>
+                </div>
+            </div>
+            <div class="text-right text-sm text-[var(--text-secondary)]">
+                <p class="font-bold text-[var(--text-primary)] text-lg mb-1">TS Imperial Homes</p>
+                <p>Indore, Madhya Pradesh</p>
+                <p>Phone: +91 93999 69641</p>
+                <p>Email: contact@imperialinteriors.in</p>
+            </div>
+        </div>
+
+        <!-- Document Info -->
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="text-3xl font-serif text-[var(--accent)] uppercase tracking-widest">Quotation</h2>
+            <div class="text-right text-sm">
+                <p><span class="font-bold text-[var(--text-primary)]">Quote No:</span> #QT-2026-101</p>
+                <p><span class="font-bold text-[var(--text-primary)]">Date:</span> 06 Oct 2026</p>
+                <p><span class="font-bold text-[var(--text-primary)]">Valid Until:</span> 06 Nov 2026</p>
+            </div>
+        </div>
+
+        <!-- Client Info -->
+        <div class="bg-[var(--bg-secondary)] p-6 mb-8 border border-[var(--border-color)]">
+            <h3 class="font-bold text-sm uppercase tracking-widest text-[var(--text-secondary)] border-b border-[var(--border-color)] pb-2 mb-4">Prepared For:</h3>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                    <p class="font-bold text-[var(--text-primary)] text-lg">[Client Name]</p>
+                    <p class="text-[var(--text-secondary)]">[Client Address Line 1]</p>
+                    <p class="text-[var(--text-secondary)]">[City, State, ZIP]</p>
+                </div>
+                <div>
+                    <p><span class="font-bold">Project:</span> [Project Name e.g. 3BHK Premium Interior]</p>
+                    <p><span class="font-bold">Location:</span> [Project Location e.g. Nipania, Indore]</p>
+                    <p><span class="font-bold">Area:</span> [e.g. 1500 Sq. Ft.]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quotation Table -->
+        <div class="flex-grow">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-[var(--bg-secondary)] border-y border-[var(--border-color)] text-sm uppercase tracking-wider text-[var(--text-secondary)]">
+                        <th class="py-3 px-4 w-12">#</th>
+                        <th class="py-3 px-4">Description of Work</th>
+                        <th class="py-3 px-4 text-right">Qty</th>
+                        <th class="py-3 px-4 text-right">Unit</th>
+                        <th class="py-3 px-4 text-right">Rate (₹)</th>
+                        <th class="py-3 px-4 text-right">Amount (₹)</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm">
+                    <!-- Item 1 -->
+                    <tr class="border-b border-[var(--border-color)]">
+                        <td class="py-4 px-4 text-[var(--text-secondary)]">1</td>
+                        <td class="py-4 px-4">
+                            <p class="font-bold text-[var(--text-primary)]">Architectural Planning & 2D Layouts</p>
+                            <p class="text-[var(--text-secondary)] text-xs mt-1">Includes floor plans, furniture layout, and initial space planning.</p>
+                        </td>
+                        <td class="py-4 px-4 text-right">1500</td>
+                        <td class="py-4 px-4 text-right">Sq.Ft</td>
+                        <td class="py-4 px-4 text-right">50</td>
+                        <td class="py-4 px-4 text-right font-bold">75,000</td>
+                    </tr>
+                    <!-- Item 2 -->
+                    <tr class="border-b border-[var(--border-color)]">
+                        <td class="py-4 px-4 text-[var(--text-secondary)]">2</td>
+                        <td class="py-4 px-4">
+                            <p class="font-bold text-[var(--text-primary)]">3D Elevation & Interior Renders</p>
+                            <p class="text-[var(--text-secondary)] text-xs mt-1">Photorealistic renders for living room, master bedroom, and kitchen.</p>
+                        </td>
+                        <td class="py-4 px-4 text-right">1</td>
+                        <td class="py-4 px-4 text-right">Lump Sum</td>
+                        <td class="py-4 px-4 text-right">45,000</td>
+                        <td class="py-4 px-4 text-right font-bold">45,000</td>
+                    </tr>
+                    <!-- Item 3 -->
+                    <tr class="border-b border-[var(--border-color)]">
+                        <td class="py-4 px-4 text-[var(--text-secondary)]">3</td>
+                        <td class="py-4 px-4">
+                            <p class="font-bold text-[var(--text-primary)]">False Ceiling & Electrical Layout</p>
+                            <p class="text-[var(--text-secondary)] text-xs mt-1">Detailed working drawings for ceiling design and lighting points.</p>
+                        </td>
+                        <td class="py-4 px-4 text-right">1500</td>
+                        <td class="py-4 px-4 text-right">Sq.Ft</td>
+                        <td class="py-4 px-4 text-right">25</td>
+                        <td class="py-4 px-4 text-right font-bold">37,500</td>
+                    </tr>
+                    <!-- Blank spaces for future items -->
+                    <tr class="border-b border-[var(--border-color)] h-16"><td colspan="6"></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Totals -->
+        <div class="flex justify-end mt-8 mb-12">
+            <div class="w-1/3">
+                <div class="flex justify-between py-2 text-sm border-b border-[var(--border-color)]">
+                    <span class="text-[var(--text-secondary)]">Subtotal</span>
+                    <span class="font-bold">₹ 1,57,500</span>
+                </div>
+                <div class="flex justify-between py-2 text-sm border-b border-[var(--border-color)]">
+                    <span class="text-[var(--text-secondary)]">GST (18%)</span>
+                    <span class="font-bold">₹ 28,350</span>
+                </div>
+                <div class="flex justify-between py-3 text-lg border-b-2 border-[var(--accent)] text-[var(--accent)] font-bold">
+                    <span>Total Amount</span>
+                    <span>₹ 1,85,850</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terms & Signatures -->
+        <div class="grid grid-cols-2 gap-12 mt-auto">
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-widest text-[var(--text-secondary)] mb-3">Terms & Conditions</h4>
+                <ul class="text-xs text-[var(--text-secondary)] list-disc pl-4 space-y-1">
+                    <li>50% advance payment required to commence work.</li>
+                    <li>30% upon completion of structural/layout drawings.</li>
+                    <li>20% prior to handover of final 3D renders/files.</li>
+                    <li>Quote is valid for 30 days from the date of issue.</li>
+                </ul>
+            </div>
+            
+            <div class="flex flex-col items-end justify-end">
+                <div class="w-48 border-b border-gray-400 mb-2"></div>
+                <p class="text-sm font-bold text-[var(--text-primary)]">Authorized Signature</p>
+                <p class="text-xs text-[var(--text-secondary)]">For TS Imperial Homes</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-xs text-[var(--text-secondary)] border-t border-[var(--border-color)] pt-4">
+            Thank you for your business. It is a pleasure working with you.
+        </div>
+
+    </div>
+
+</body>
+</html>
