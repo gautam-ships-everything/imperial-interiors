@@ -83,7 +83,7 @@ export async function POST(request: Request) {
       }));
 
     const response = await ai.models.generateContentStream({
-      model: "gemini-2.0-flash",
+      model: "gemma-4-26b-a4b-it",
       contents,
       config: {
         systemInstruction: SYSTEM_PROMPT,
